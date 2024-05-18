@@ -15,7 +15,6 @@
 body {
   background-color: var(--main-bg-color);
   height: 100vh;
-  min-width: 1980px;
   overflow: hidden;
   cursor: none;
 }
@@ -37,22 +36,26 @@ body {
 }
 .eyeContainer {
   position: absolute;
-  left: 199.5px;
-  bottom: 329.3px;
+  display: flex;
+  opacity: 0;
+  height: 100vh;
+  width: 100vw;
+  animation: fadeIn 0.3s 11.5s forwards;
 }
 .eye {
-  width: 30px;
-  height: 30px;
+  width: 5vh;
+  height: 5vh;
   border-radius: 50%;
-  position: relative;
+  position: fixed;
+  top: 53.8%;
+  left: 14.5%;
 }
 .pupil {
-  width: 10px;
-  height: 10px;
+  width: 1.5vh;
+  height: 1.5vh;
   background-color: var(--violet);
   border-radius: 50%;
-  position: absolute;
-  top: 34%;
-  left: 35%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 56%;
+  left: 15.3%;
 }
