@@ -1,0 +1,62 @@
+@keyframes slideIn {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: -13%;
+  }
+}
+@keyframes bgSlideIn {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: -25%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    top: 0;
+  }
+}
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+@keyframes fadeInOutSky {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes backgroundFade {
+  to {
+    filter: sepia(40%);
+  }
+}

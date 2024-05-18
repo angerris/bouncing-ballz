@@ -1,0 +1,111 @@
+.overlay {
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: fadeOut 3s 4.5s forwards;
+}
+.overlay-title {
+  opacity: 0;
+  animation: fadeIn 3s 1s forwards, fadeOut 2s 3.5s forwards;
+  font-size: 60px;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.overlay-subtitle {
+  opacity: 0;
+  animation: fadeIn 3s 2.3s forwards, fadeOut 2s 3.5s forwards;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.stars {
+  z-index: -2;
+  background: url("./../assets/images/stars.svg");
+  background-size: cover;
+  background-position: center top;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  animation: slideIn 5s 6s ease-out forwards, fadeIn 5s 6s forwards,
+    fadeInOut 8s infinite alternate;
+}
+.sunset {
+  z-index: -2;
+  background: url("./../assets/images/sunset.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 150%;
+  width: 100%;
+  opacity: 0;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  animation: slideIn 4s 7s ease-out forwards, fadeIn 5s 7s forwards,
+    fadeInOutSky 6s ease-in-out infinite alternate;
+}
+.mountains {
+  background: url("./../assets/images/mountains.svg");
+  animation: bgSlideIn 3s 7.8s ease-out forwards, fadeIn 4.5s 7.5s forwards;
+}
+
+.fourthPlan {
+  background: url("./../assets/images/fourth.svg");
+  animation: slideIn 2.8s 8.2s ease-out forwards, fadeIn 5s 7s forwards,
+    backgroundFade 3s 1s ease-in-out infinite alternate;
+}
+.thirdPlan {
+  background: url("./../assets/images/third.svg");
+  filter: none;
+  animation: slideIn 2.8s 8.6s ease-out forwards, fadeIn 5s 7s forwards,
+    backgroundFade 3s 2s ease-in-out infinite alternate;
+}
+
+.secondPlan {
+  background: url("./../assets/images/second.svg");
+  animation: slideIn 2.8s 8.9s ease-out forwards, fadeIn 5s 7s forwards,
+    backgroundFade 3s 3s ease-in-out infinite alternate;
+}
+.firstPlan {
+  background: url("./../assets/images/first.svg");
+  animation: slideIn 2.8s 9.2s ease-out forwards, fadeIn 5s 7s forwards;
+}
+
+.groundShadow {
+  background: url("./../assets/images/ground-shadow.svg");
+  filter: opacity(50%);
+  animation: slideIn 2.4s 9.5s forwards, fadeIn 5s 7s forwards;
+  z-index: -1;
+}
+.ground {
+  background: url("./../assets/images/ground.svg");
+  animation: slideIn 2.4s 9.5s forwards, fadeIn 5s 7s forwards;
+}
+.layer {
+  opacity: 0;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  z-index: -2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100%;
+  width: 100%;
+}
