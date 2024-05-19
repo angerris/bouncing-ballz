@@ -3,7 +3,16 @@ import "./app/eyeMovements";
 import "./app/preventClick";
 import Circle from "./app/circle";
 
-window.onload = function () {
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const content = document.getElementById("content");
+  if (preloader && content) {
+    preloader.style.display = "none";
+    content.style.display = "block";
+  }
+});
+
+function canvas() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
   const ctx = canvas.getContext("2d");
 
@@ -37,4 +46,5 @@ window.onload = function () {
   }
 
   Circle.animate(ctx, circles, canvas.width, canvas.height);
-};
+}
+canvas();
