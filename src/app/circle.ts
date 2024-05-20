@@ -5,7 +5,7 @@ class Circle {
   constructor(public x: number, public y: number) {
     this._radius = Math.random() * 10 + 10;
     this._dy = -5;
-    this._gravity = 0.7;
+    this._gravity = 0.5;
   }
 
   _draw(ctx: CanvasRenderingContext2D) {
