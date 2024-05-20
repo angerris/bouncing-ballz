@@ -62,7 +62,7 @@
 }
 .mountains {
   background: url("./../assets/images/mountains.svg");
-  animation: bgSlideIn 3s 7.8s ease-out forwards, fadeIn 4.5s 7.5s forwards;
+  animation: slideIn 3s 7.8s ease-out forwards, fadeIn 4.5s 7.5s forwards;
 }
 
 .fourthPlan {

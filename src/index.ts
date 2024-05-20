@@ -20,7 +20,7 @@ function canvas() {
 
   function resizeCanvas() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight - 5;
+    canvas.height = window.innerHeight - 20;
   }
   resizeCanvas();
 

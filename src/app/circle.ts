@@ -8,7 +8,7 @@ class Circle {
     this._gravity = 0.7;
   }
 
-  draw(ctx: CanvasRenderingContext2D) {
+  _draw(ctx: CanvasRenderingContext2D) {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this._radius, 0, Math.PI * 2);
     ctx.fillStyle = "black";
@@ -16,7 +16,7 @@ class Circle {
     ctx.closePath();
   }
 
-  update(canvasHeight: number) {
+  _update(canvasHeight: number) {
     this._dy += this._gravity;
     this.y += this._dy;
     if (this.y + this._radius >= canvasHeight) {
@@ -32,8 +32,8 @@ class Circle {
   ) {
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
     circles.forEach((circle) => {
-      circle.draw(ctx);
-      circle.update(canvasHeight);
+      circle._draw(ctx);
+      circle._update(canvasHeight);
     });
     requestAnimationFrame(() =>
       Circle.animate(ctx, circles, canvasWidth, canvasHeight)

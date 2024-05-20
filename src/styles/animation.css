@@ -3,15 +3,7 @@
     bottom: -100%;
   }
   to {
-    bottom: -13%;
-  }
-}
-@keyframes bgSlideIn {
-  from {
-    bottom: -100%;
-  }
-  to {
-    bottom: -25%;
+    bottom: 0;
   }
 }
 
@@ -31,11 +23,6 @@
   }
 }
 
-@keyframes slideUp {
-  to {
-    top: 0;
-  }
-}
 @keyframes fadeInOut {
   0%,
   100% {

@@ -56,20 +56,41 @@ body {
   height: 30vh;
   width: 30vw;
 }
+
 .eyeContainer {
   position: absolute;
   display: flex;
-  opacity: 0;
   height: 100vh;
   width: 100vw;
-  animation: fadeIn 0.3s 11.5s forwards;
+  opacity: 0;
+  animation: fadeIn 0.3s 11.5s ease-out forwards;
 }
+
+.bgContainer {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  animation: slideIn 2.8s 7s ease-out forwards;
+}
+.bgContainer::after {
+  content: "";
+  position: absolute;
+  background-color: var(--violet);
+  width: 70vw; /* Width */
+  height: 41vh; /* Height */
+  border-radius: 0 100% 0 0; /* Border radius for the semicircle */
+  left: 0;
+  bottom: 0;
+  z-index: -2; /* Layer behind .eyeContainer */
+}
+
 .eye {
   width: 5vh;
   height: 5vh;
   border-radius: 50%;
   position: fixed;
-  top: 53.8%;
+  top: 40.8%;
   left: 14.5%;
 }
 .pupil {
@@ -78,6 +99,6 @@ body {
   background-color: var(--violet);
   border-radius: 50%;
   position: fixed;
-  top: 56%;
+  top: 42.5%;
   left: 15.3%;
 }
