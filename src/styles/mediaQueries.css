@@ -1,0 +1,27 @@
+@media screen and (max-width: 991px) {
+  .character,
+  .bgContainer,
+  .bgContainer::after,
+  .eyeContainer,
+  .eye,
+  .pupil {
+    display: none;
+  }
+  .stars {
+    background-repeat: no-repeat;
+  }
+  .sunset {
+    bottom: -200%;
+    height: 100%;
+  }
+  .ground,
+  .groundShadow {
+    animation: mobileSlideIn 2.4s 9.5s forwards, fadeIn 5s 7s forwards;
+  }
+}
+@media screen and (max-width: 500px) {
+  .layer,
+  .stars {
+    background-size: contain;
+  }
+}

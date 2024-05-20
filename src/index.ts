@@ -1,16 +1,8 @@
 import "./styles/style.css";
 import "./app/eyeMovements";
 import "./app/preventClick";
+import "./app/functions";
 import Circle from "./app/circle";
-
-window.addEventListener("load", () => {
-  const preloader = document.getElementById("preloader");
-  const content = document.getElementById("content");
-  if (preloader && content) {
-    preloader.style.display = "none";
-    content.style.display = "block";
-  }
-});
 
 function canvas() {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
@@ -28,13 +20,27 @@ function canvas() {
   const circles: Circle[] = [];
 
   canvas.addEventListener("click", handleClick);
+  canvas.addEventListener("touchstart", handleTouch);
 
   function handleClick(event: MouseEvent) {
     const rect = canvas.getBoundingClientRect();
     const mouseX = event.clientX - rect.left;
     const mouseY = event.clientY - rect.top;
-    const newCircle = new Circle(mouseX, mouseY);
+    spawnCircle(mouseX, mouseY);
+  }
 
+  function handleTouch(event: TouchEvent) {
+    event.preventDefault();
+    const rect = canvas.getBoundingClientRect();
+    for (let i = 0; i < event.touches.length; i++) {
+      const touchX = event.touches[i].clientX - rect.left;
+      const touchY = event.touches[i].clientY - rect.top;
+      spawnCircle(touchX, touchY);
+    }
+  }
+
+  function spawnCircle(x: number, y: number) {
+    const newCircle = new Circle(x, y);
     circles.push(newCircle);
 
     setTimeout(() => {

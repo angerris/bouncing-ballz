@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 @import url("./animation.css");
 @import url("./layers.css");
+@import url("./mediaQueries.css");
 
 :root {
   --main-bg-color: #241e4a;
@@ -19,6 +20,9 @@ body {
   cursor: none;
   background-color: var(--main-bg-color);
 }
+.visuallyHidden {
+  display: none;
+}
 .preloader {
   position: fixed;
   top: 0;
@@ -31,7 +35,6 @@ body {
   justify-content: center;
   z-index: 9999;
 }
-
 .spinner {
   border: 10px solid var(--light-violet);
   border-top: 10px solid var(--violet);
@@ -56,7 +59,6 @@ body {
   height: 30vh;
   width: 30vw;
 }
-
 .eyeContainer {
   position: absolute;
   display: flex;
@@ -65,7 +67,6 @@ body {
   opacity: 0;
   animation: fadeIn 0.3s 11.5s ease-out forwards;
 }
-
 .bgContainer {
   position: absolute;
   display: flex;
@@ -84,7 +85,6 @@ body {
   bottom: 0;
   z-index: -2;
 }
-
 .eye {
   width: 5vh;
   height: 5vh;
