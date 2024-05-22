@@ -2,7 +2,7 @@ const overlay: HTMLElement = document.getElementById("overlay");
 
 setTimeout(function () {
   overlay.classList.add("visuallyHidden");
-}, 8000);
+}, 10000);
 
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");

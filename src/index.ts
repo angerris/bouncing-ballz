@@ -2,6 +2,7 @@ import "./styles/style.css";
 import "./app/eyeMovements";
 import "./app/preventClick";
 import "./app/functions";
+import "./app/clickAnimation";
 import Circle from "./app/circle";
 
 function canvas() {
